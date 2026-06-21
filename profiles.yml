@@ -1,0 +1,28 @@
+master_arbeit_kunal:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: LISBBVI-DY95756
+      user: JDOBARIYA299
+      password: jignasha4894kunalJin
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: DB_DATABASE_GETSAFE
+      schema: PUBLIC
+      threads: 4
+
+
+
+#master_arbeit_kunal:
+#  target: dev
+#  outputs:
+#    dev:
+#      type: bigquery
+#      method: service-account
+#      keyfile: /Users/kunalsmac/kunal_vs_code/keyfile.json                                 #"{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"                  # /Users/kunalsmac/kunal_vs_code/keyfile.json
+#      project: master-thesis-486415
+#      dataset: trial_transformed_datsets
+#      threads: 4
+
+
