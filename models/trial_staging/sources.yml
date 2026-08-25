@@ -2,8 +2,7 @@ version: 2
 
 sources:
   - name: getsafe
-    database: DB_DATABASE_GETSAFE
+    database: NEW_DB_ENPAL
     schema: PUBLIC
     tables:
       - name: DATA_FOR_ANALYTICS_CASE_STUDY
-      - name: GETSAFE_ACCOUNT_CSV

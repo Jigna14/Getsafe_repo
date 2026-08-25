@@ -1,5 +1,9 @@
 
-{{ config(materialized='table') }}
+{{ config(materialized='table',
+   cluster_by= ['created_at']
+) }}
+
+
 select
     transaction_id,
     cast(created_at as timestamp) as created_at,

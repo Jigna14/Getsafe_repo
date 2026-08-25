@@ -1,0 +1,36 @@
+semantic_models:
+  - name: transactions
+    model: ref('tbl_stg_transactions')
+
+    defaults:
+      agg_time_dimension: created_at
+
+    entities:
+      - name: transaction
+        type: primary
+        expr: transaction_id
+
+    dimensions:
+      - name: created_at
+        type: time
+        type_params:
+          time_granularity: day
+
+      - name: premium_currency
+        type: categorical
+
+      - name: party
+        type: categorical
+
+      - name: status
+        type: categorical
+
+    measures:
+      - name: premium_amount
+        description: "Premium amount"
+        agg: sum
+
+      - name: transaction_count
+        description: "Number of transactions"
+        agg: count
+        expr: transaction_id

@@ -1,0 +1,16 @@
+metrics:
+  - name: total_premium
+    type: simple
+    label: Total Premium
+    description: "Total premium amount"
+    type_params:
+      measure:
+        name: premium_amount
+
+  - name: total_transactions
+    type: simple
+    label: Total Transactions
+    description: "Total number of transactions"
+    type_params:
+      measure:
+        name: transaction_count
