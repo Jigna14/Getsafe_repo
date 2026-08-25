@@ -26,3 +26,22 @@ master_arbeit_kunal:
 #      threads: 4
 
 
+# master_arbeit_kunal:
+#   target: dev
+#   outputs:
+#     dev:
+#       type: redshift
+#       method: iam
+#       cluster_id: rzzoqih-xt52898
+#       host: 
+#       port: 5439
+#       user: JDOBARIYA1406
+#       dbname: 
+#       schema:
+#       threads: 
+
+
+
+
+
+
