@@ -3,12 +3,12 @@ master_arbeit_kunal:
   outputs:
     dev:
       type: snowflake
-      account: LISBBVI-DY95756
-      user: JDOBARIYA299
-      password: jignasha4894kunalJin
+      account: RZZOQIH-XT52898
+      user: JDOBARIYA1406
+      password: xTxKFN3kaf82gkS
       role: ACCOUNTADMIN
       warehouse: COMPUTE_WH
-      database: DB_DATABASE_GETSAFE
+      database: NEW_DB_ENPAL
       schema: PUBLIC
       threads: 4
 
