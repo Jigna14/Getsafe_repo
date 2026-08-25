@@ -6,3 +6,5 @@ sources:
     schema: PUBLIC
     tables:
       - name: DATA_FOR_ANALYTICS_CASE_STUDY
+
+
