@@ -2,9 +2,14 @@ version: 2
 
 sources:
   - name: getsafe
-    database: NEW_DB_ENPAL
-    schema: PUBLIC
+    database: my-project-smava
+    schema: smava_demo_dataset
     tables:
-      - name: DATA_FOR_ANALYTICS_CASE_STUDY
-
-
+      - name: customers
+        description: "Customer data from Getsafe"
+        columns:
+          - name: customer_id
+            description: "Unique identifier for each customer"
+            tests:
+              - not_null
+              - unique

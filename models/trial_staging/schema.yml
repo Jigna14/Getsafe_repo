@@ -1,22 +1,29 @@
-
 version: 2
 
 models:
   - name: tbl_stg_transactions
-    description: "A starter dbt model"
+    description: "Staging model for transactions"
+    config:
+     tags:
+      - staging
     columns:
-      - name: transaction_id
-        description: "Unique identifier for each transaction"
-        data_tests:
+      - name: customer_id
+        description: "{{doc('customer_id')}}"
+        tests:
+          - not_null
           - unique
+      - name: signup_date
+        description: "Timestamp when the transaction was created"
+        tests:
           - not_null
       - name: created_at
-        description: "Converts the created_at field into a proper timestamp data type"
-      - name: premium_amount
-        description: "Converts the premium amount into a numeric value with 18 digits of precision and 2 decimal places"
-      - name: premium_currency
-        description: "Currency in which the premium was charged (e.g., EUR, USD)"
-      - name: party
-        description: "Converts the party name to lowercase for consistent reporting and grouping"
-      - name: status
-        description: "Converts transaction status values to lowercase for consistency"
+        description: "Timestamp when the transaction was created"
+        tests:
+              - not_null    
+              - relationships:
+                  to: ref('time_spine')
+                  field: date_day
+
+
+
+

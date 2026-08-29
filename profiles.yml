@@ -1,29 +1,40 @@
+#master_arbeit_kunal:
+ #target: dev
+  #outputs:
+   #dev:
+    #type: snowflake
+     #account: RZZOQIH-XT52898
+      #user: JDOBARIYA1406
+      #password: xTxKFN3kaf82gkS
+      #role: ACCOUNTADMIN
+      #warehouse: COMPUTE_WH
+      #database: NEW_DB_ENPAL
+      #schema: PUBLIC
+      #threads: 4
+
+
+
 master_arbeit_kunal:
   target: dev
   outputs:
     dev:
-      type: snowflake
-      account: RZZOQIH-XT52898
-      user: JDOBARIYA1406
-      password: xTxKFN3kaf82gkS
-      role: ACCOUNTADMIN
-      warehouse: COMPUTE_WH
-      database: NEW_DB_ENPAL
-      schema: PUBLIC
+      type: bigquery
+      method: service-account
+      keyfile: /Users/kunalsmac/kunal_vs_code/keyfile.json                                 #"{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"                  # /Users/kunalsmac/kunal_vs_code/keyfile.json
+      project: my-project-smava
+      dataset: smava_demo_dataset_destination
       threads: 4
+    prod:
+      type: bigquery
+      method: service-account
+      keyfile: /Users/kunalsmac/kunal_vs_code/keyfile.json
+      project: my-project-smava
+      dataset: smava_demo_dataset_destination
+      threads: 4
+      
 
 
 
-#master_arbeit_kunal:
-#  target: dev
-#  outputs:
-#    dev:
-#      type: bigquery
-#      method: service-account
-#      keyfile: /Users/kunalsmac/kunal_vs_code/keyfile.json                                 #"{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"                  # /Users/kunalsmac/kunal_vs_code/keyfile.json
-#      project: master-thesis-486415
-#      dataset: trial_transformed_datsets
-#      threads: 4
 
 
 # master_arbeit_kunal:
@@ -39,9 +50,6 @@ master_arbeit_kunal:
 #       dbname: 
 #       schema:
 #       threads: 
-
-
-
 
 
 
