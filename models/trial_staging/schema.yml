@@ -20,10 +20,9 @@ models:
         description: "Timestamp when the transaction was created"
         tests:
               - not_null    
+              - unique
               - relationships:
                   to: ref('time_spine')
                   field: date_day
-
-
-
+              
 
