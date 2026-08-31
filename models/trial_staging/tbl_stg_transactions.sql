@@ -1,6 +1,9 @@
 {{ config(materialized='table',
-tags = ['staging', 'finance']
-)}}
+   cluster_by= ['created_at'],
+   tags = ['finance', 'staging']
+) }}
+
+
 
 select
 {{ dbt_utils.generate_surrogate_key(['customer_id'])}} as customer_id_hk,
