@@ -1,6 +1,7 @@
 
 {{ config(materialized='table',
-   cluster_by= ['created_at']
+   cluster_by= ['created_at'],
+   tags = ['finance', 'staging']
 ) }}
 
 
