@@ -31,6 +31,13 @@ master_arbeit_kunal:
       project: my-project-smava
       dataset: smava_demo_dataset_destination
       threads: 4
+    vision:
+      type: bigquery
+      method: service-account
+      keyfile: /Users/kunalsmac/kunal_vs_code/keyfile.json
+      project: my-project-smava
+      dataset: smava_demo_dataset_destination
+      threads: 4
       
 
 
