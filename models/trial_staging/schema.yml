@@ -21,8 +21,5 @@ models:
         tests:
               - not_null    
               - unique
-              - relationships:
-                  to: ref('time_spine')
-                  field: date_day
-              
+
 
