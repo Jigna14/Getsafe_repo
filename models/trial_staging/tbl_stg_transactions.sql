@@ -14,6 +14,7 @@ country,
 employment_type,
 annual_income,
 created_at,
-{{ macro_example('annual_income') }} as income_100
+{{ macro_example('annual_income') }} as income_100,
+{{ macro_revenue('annual_income',15)}} as revenue_15
 from {{ source('getsafe', 'customers') }}
 
