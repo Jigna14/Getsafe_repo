@@ -1,15 +1,8 @@
 version: 2
 
 sources:
-  - name: getsafe
+  - name: fyta_raw
     database: my-project-smava
-    schema: smava_demo_dataset
+    schema: fyta_data_set
     tables:
-      - name: customers
-        description: "Customer data from Getsafe"
-        columns:
-          - name: customer_id
-            description: "Unique identifier for each customer"
-            tests:
-              - not_null
-              - unique
+      - name: fyta_sensor_sample
