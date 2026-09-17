@@ -1,25 +1,33 @@
 version: 2
 
 models:
-  - name: tbl_stg_transactions
-    description: "Staging model for transactions"
-    config:
-     tags:
-      - staging
+  - name: tbl_stg_sensor_readings
+
     columns:
-      - name: customer_id
-        description: "{{doc('customer_id')}}"
+      - name: device_id
         tests:
           - not_null
-          - unique
-      - name: signup_date
-        description: "Timestamp when the transaction was created"
+
+      - name: timestamp
         tests:
           - not_null
-      - name: created_at
-        description: "Timestamp when the transaction was created"
+
+      - name: soil_moisture_vwc
         tests:
-              - not_null    
-              - unique
+          - not_null
 
+      - name: soil_temp_c
+        tests:
+          - not_null
 
+      - name: ec_us_cm
+        tests:
+          - not_null
+
+      - name: light_par
+        tests:
+          - not_null
+
+      - name: air_humidity_pct
+        tests:
+          - not_null

@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: tbl_int_sensor_readings
+
+    columns:
+
+      - name: device_id
+        data_tests:
+          - not_null
+
+      - name: timestamp
+        data_tests:
+          - not_null
+
+      - name: soil_moisture_clean
+        data_tests:
+          - not_null:
+              config:
+                where: "is_negative_moisture = false"
+
+      - name: has_reporting_gap
+        data_tests:
+          - not_null
+
+    tests:
+      - unique:
+          column_name: "device_id || '-' || cast(timestamp as string)"
